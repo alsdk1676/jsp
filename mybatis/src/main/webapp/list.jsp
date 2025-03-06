@@ -21,7 +21,7 @@
 		<%
 			ProductDAO productDAO = new ProductDAO();
 			List<ProductVO> products = productDAO.selectAll();
-			System.out.println(products.toString());
+			/* System.out.println(products.toString()); */
 			
 			for(ProductVO product : products) {
 				

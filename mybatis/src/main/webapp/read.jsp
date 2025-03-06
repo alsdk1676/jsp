@@ -12,7 +12,7 @@
 <body>
    <%
       ProductDAO productDAO = new ProductDAO();
-      System.out.println(request.getParameter("id"));
+      /* System.out.println(request.getParameter("id")); */
       Long id = Long.parseLong(request.getParameter("id"));
       Optional<ProductVO> foundProduct = productDAO.select(id);
       
@@ -33,6 +33,14 @@
             <td><%=product.getProductStock() %></td>
          </tr>
       </table>
+      
+      <div>
+      	<a href="update.jsp?id=<%=request.getParameter("id") %>">상품 수정</a>
+      </div>
+      
+      <div>
+      	<a href="delete?id=<%=request.getParameter("id") %>">상품 삭제</a>
+      </div>
       
    <%    
       }
