@@ -9,16 +9,17 @@
 <body>
 	<form action="write-ok.product" method="post">
 		<label>
-			<input type="text" name="productName" placeholder="상품명" />
+			<input type="text" name="productName" placeholder="상품명"/>
 		</label>
 		<label>
-			<input type="text" name="productPrice" placeholder="상품 가격" />
+			<input type="text" name="productPrice" placeholder="상품가격"/>
 		</label>
 		<label>
-			<input type="text" name="productStock" placeholder="상품 재고" />
+			<input type="text" name="productStock" placeholder="상품재고"/>
 		</label>
 		<button>상품 등록</button>
 	</form>
-
 </body>
 </html>
+
+

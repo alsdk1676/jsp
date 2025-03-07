@@ -46,5 +46,6 @@ public class ProductDAO {
 	public void delete(Long id) {
 		sqlSession.delete("product.delete", id);
 	}
+	
 
 }

@@ -30,7 +30,7 @@ public class ProductWriteOkController implements Action {
 		result.setRedirect(true);
 //		result.setPath(req.getContextPath() + "/read.product");
 		result.setPath(req.getContextPath() + "/read.product?id=" + insertedId);
-		return null;
+		return result;
 	}
 
 }
