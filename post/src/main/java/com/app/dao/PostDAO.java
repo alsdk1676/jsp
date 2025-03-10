@@ -13,6 +13,8 @@ public class PostDAO {
 	
 	public PostDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
+//		true 값 안넘기면 DB에 반영 X
+//		auto commit
 	}
 	
 //	게시물 추가

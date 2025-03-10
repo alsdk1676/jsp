@@ -23,6 +23,7 @@ public class PostFrontController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html; charset=utf-8;");
 		
+//		URI 분리 => target
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
@@ -46,9 +47,9 @@ public class PostFrontController extends HttpServlet {
 		
 		if(result != null) {
 			if(result.isRedirect()) {
-				resp.sendRedirect(result.getPath());
+				resp.sendRedirect(result.getPath()); // req 객체 안들고감
 			}else {
-				req.getRequestDispatcher(result.getPath()).forward(req, resp);
+				req.getRequestDispatcher(result.getPath()).forward(req, resp); // req 객체 들고감
 			}
 		}
 		
