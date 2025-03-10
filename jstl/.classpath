@@ -17,5 +17,6 @@
 	<classpathentry exported="true" kind="lib" path="C:/web_0900_sma/jsp/workspace/jstl/src/main/webapp/WEB-INF/lib/ojdbc8.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/web_0900_sma/jsp/workspace/jstl/src/main/webapp/WEB-INF/lib/jstl.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/web_0900_sma/jsp/workspace/jstl/src/main/webapp/WEB-INF/lib/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/web_0900_sma/jsp/workspace/jstl/src/main/webapp/WEB-INF/lib/org.json.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
