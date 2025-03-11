@@ -22,13 +22,8 @@ public class MemberDAO {
 	}
 	
 //	로그인
-	public String selectByEmailAndPassword(MemberVO memberVO) {
-		return sqlSession.selectOne("member.selectByEmailAndPassword", memberVO);
-	}
-	
-//	멤버 조회
-	public Optional<MemberVO> selectByEmail(String memberEmail) {
-		return sqlSession.selectOne("member.selectByEmail", memberEmail);
+	public String selectByEmail(MemberVO memberVO) {
+		return sqlSession.selectOne("member.selectByEmail", memberVO);
 	}
 	
 

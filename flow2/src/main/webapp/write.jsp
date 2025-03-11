@@ -7,7 +7,7 @@
 <title>상품 추가 페이지</title>
 </head>
 <body>
-	<form method="post" action="write-ok.product">
+	<form method="post" action="write">
 		<label>
 			<input type="text" name="productName" placeholder="상품명" />
 		</label>

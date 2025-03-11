@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Result;
 import com.app.member.controller.MemberJoinController;
 import com.app.member.controller.MemberJoinOkController;
-import com.app.member.controller.MemberLoginController;
-import com.app.member.controller.MemberLoginOkController;
 
 public class MemberFrontController extends HttpServlet {
 	@Override
@@ -22,16 +20,14 @@ public class MemberFrontController extends HttpServlet {
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-//		System.out.println(target);
+		System.out.println(target);
 		
 		if(target.equals("join")) {
 			result = new MemberJoinController().execute(req, resp);
 		}else if(target.equals("join-ok")) {
 			result = new MemberJoinOkController().execute(req, resp);
 		}else if(target.equals("login")) {
-			result = new MemberLoginController().execute(req, resp);
 		}else if(target.equals("login-ok")) {
-			result = new MemberLoginOkController().execute(req, resp);
 		}else {
 //			전부 404
 		}

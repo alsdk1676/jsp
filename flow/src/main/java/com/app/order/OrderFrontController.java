@@ -1,4 +1,4 @@
-package com.app.member;
+package com.app.order;
 
 import java.io.IOException;
 
@@ -12,8 +12,9 @@ import com.app.member.controller.MemberJoinController;
 import com.app.member.controller.MemberJoinOkController;
 import com.app.member.controller.MemberLoginController;
 import com.app.member.controller.MemberLoginOkController;
+import com.app.order.controller.OrderWriteOkController;
 
-public class MemberFrontController extends HttpServlet {
+public class OrderFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
@@ -24,14 +25,9 @@ public class MemberFrontController extends HttpServlet {
 		
 //		System.out.println(target);
 		
-		if(target.equals("join")) {
-			result = new MemberJoinController().execute(req, resp);
+		if(target.equals("write-ok")) {
+			result = new OrderWriteOkController().execute(req, resp);
 		}else if(target.equals("join-ok")) {
-			result = new MemberJoinOkController().execute(req, resp);
-		}else if(target.equals("login")) {
-			result = new MemberLoginController().execute(req, resp);
-		}else if(target.equals("login-ok")) {
-			result = new MemberLoginOkController().execute(req, resp);
 		}else {
 //			전부 404
 		}

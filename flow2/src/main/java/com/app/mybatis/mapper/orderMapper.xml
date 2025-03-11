@@ -3,11 +3,6 @@
 
 <mapper namespace="order">
 
-<insert id="insert" parameterType="OrderVO">
-	INSERT INTO TBL_ORDER
-	VALUES(SEQ_ORDER.NEXTVAL, #{memberId}, #{productId}, #{productCount})
-</insert>
-
 
 	
 	

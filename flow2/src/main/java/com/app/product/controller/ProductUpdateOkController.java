@@ -6,30 +6,28 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import com.app.Action;
 import com.app.Result;
 import com.app.dao.ProductDAO;
+import com.app.vo.ProductVO;
 
-public class ProductListController implements Action {
+public class ProductUpdateOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		ProductDAO productDAO = new ProductDAO();
+		ProductVO productVO = new ProductVO();
 		
-//		setAttribute
-//		화면에서 키 값으로 접근할 수 있는 객체를 보낸다.
+		productVO.setId(Long.parseLong(req.getParameter("id")));
+		productVO.setProductName(req.getParameter("productName"));
+		productVO.setProductPrice(Integer.parseInt(req.getParameter("productPrice")));
+		productVO.setProductStock(Integer.parseInt(req.getParameter("productStock")));
 		
-		JSONArray products = new JSONArray();
-		productDAO.selectAll().stream().map(JSONObject::new).forEach(products::put);
+		productDAO.update(productVO);
 		
-//		req.setAttribute("products", productDAO.selectAll()); 
-		req.setAttribute("products", products); 
-		result.setPath("list.jsp");
-		
+		result.setRedirect(true);
+		result.setPath("list.product");
 		return result;
 	}
 

@@ -21,6 +21,7 @@
 			ORDER BY ID DESC
 		)
 		WHERE ROWNUM = 1
+	
 	</select>
 	
 	<select id="select" parameterType="Long" resultType="ProductVO">
