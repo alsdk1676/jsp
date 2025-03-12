@@ -85,7 +85,7 @@
 	})
 	
 	   NodeList.prototype.filter = Array.prototype.filter;
-	   
+	
 	button.addEventListener("click", (e) => {
 	   e.preventDefault();
 	   const inputs = document.querySelectorAll("#order input[name='productCount']")
