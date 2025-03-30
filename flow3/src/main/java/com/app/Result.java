@@ -1,10 +1,8 @@
 package com.app;
 
 public class Result {
-//	어떻게? 
-	private boolean isRedirect;
 	
-//	어디로?
+	private boolean isRedirect;
 	private String path;
 	
 	public Result() {;}
@@ -34,7 +32,6 @@ public class Result {
 	public String toString() {
 		return "Result [isRedirect=" + isRedirect + ", path=" + path + "]";
 	}
-	
-	
 
+	
 }

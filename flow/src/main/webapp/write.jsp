@@ -17,7 +17,7 @@
 		<label>
 			<input type="text" name="productStock" placeholder="상품 재고" />
 		</label>
-		<button>상품 등록</button>
+		<button type="button">상품 등록</button>
 	</form>
 </body>
 </html>

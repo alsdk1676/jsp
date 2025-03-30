@@ -35,11 +35,11 @@
       </table>
       
       <div>
-      	<a href="update.jsp?id=<%=request.getParameter("id") %>">상품 수정</a>
+      	<a href="update.jsp?id=<%=request.getParameter("id") %>">정보 수정</a>
       </div>
       
       <div>
-      	<a href="delete?id=<%=request.getParameter("id") %>">상품 삭제</a>
+      	<a href="delete?id=<%=request.getParameter("id") %>">정보 삭제</a>
       </div>
       
    <%    

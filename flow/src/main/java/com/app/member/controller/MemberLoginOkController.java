@@ -22,7 +22,6 @@ public class MemberLoginOkController implements Action {
 		String memberEmail = null;
 		HttpSession session = req.getSession();
 		
-		
 		memberVO.setMemberEmail(req.getParameter("memberEmail"));
 		memberVO.setMemberPassword(req.getParameter("memberPassword"));
 		memberEmail = memberDAO.selectByEmailAndPassword(memberVO);

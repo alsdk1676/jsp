@@ -39,9 +39,8 @@
    </table>
 
    <form id="cancel-form" action="cancel.order" method="post">
-   
    </form>
-   <button type="button" onclick="cancel()">주문 취소</button>
+   	<button type="button" onclick="cancel()">주문 취소</button>
 
 </body>
 <script src="assets/css/order/order-list.js" />
